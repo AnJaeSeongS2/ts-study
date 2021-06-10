@@ -1,20 +1,32 @@
 // interface is only exist on TS
-interface Human {
-    name: string,
-    age: number,
-    gender: string
+// interface Human {
+//     name: string,
+//     age: number,
+//     gender: string
+// }
+//
+// const jaeseong = {
+//     name: "jaeseong",
+//     age: 20,
+//     gender: "male"
+// }
+
+class Human {
+    public name:string
+    public gender:string
+    public age:number
+    constructor(name:string, gender:string, age:number) {
+        this.name = name
+        this.gender = gender
+        this.age = age
+    }
 }
 
-const jaeseong = {
-    name: "jaeseong",
-    age: 20,
-    gender: "male"
+const sayHi = (person:Human):string => {
+    return `Hello ${person.name} is ${person.gender}, ${person.age} old`
 }
 
-const sayHi = (human: Human): string => {
-    return `hello ${human.name} is ${human.gender}, ${human.age} old`
-}
-
-sayHi(jaeseong)
+const jaeseong = new Human("jaeseong", "male", 31)
+console.log(sayHi(jaeseong))
 
 export {}
