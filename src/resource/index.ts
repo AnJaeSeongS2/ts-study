@@ -11,6 +11,7 @@
 //     gender: "male"
 // }
 
+import enumTest from './enumTest'
 class Human {
     public name:string
     public gender:string
@@ -29,4 +30,5 @@ const sayHi = (person:Human):string => {
 const jaeseong = new Human("jaeseong", "male", 31)
 console.log(sayHi(jaeseong))
 
+enumTest()
 export {}
