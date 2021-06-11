@@ -18,7 +18,13 @@ let cName:string = Color[0b100].toString()
 function out():void {
     console.log(c)
     console.log(cName)
+}
+
+function outMeta():void {
     console.log(Color)
 }
 
-export default out
+export default {
+    out,
+    outMeta
+}

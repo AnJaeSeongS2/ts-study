@@ -30,5 +30,6 @@ const sayHi = (person:Human):string => {
 const jaeseong = new Human("jaeseong", "male", 31)
 console.log(sayHi(jaeseong))
 
-enumTest()
+enumTest.out()
+enumTest.outMeta()
 export {}
