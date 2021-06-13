@@ -12,6 +12,8 @@
         "tsc-watch": "^4.4.0"
     },
     "dependencies": {
+        "@types/node": "^15.12.2",
+        "axios": "^0.21.1",
         "typescript": "^4.3.2"
     }
 }

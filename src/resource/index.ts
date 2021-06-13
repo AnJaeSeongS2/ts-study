@@ -11,7 +11,9 @@
 //     gender: "male"
 // }
 
+import axiosTest from './axiosTest'
 import enumTest from './enumTest'
+import typeTest from './typeTest'
 class Human {
     public name:string
     public gender:string
@@ -32,4 +34,7 @@ console.log(sayHi(jaeseong))
 
 enumTest.out()
 enumTest.outMeta()
+typeTest.test()
+axiosTest.getSearchedArticleList()
+
 export {}
