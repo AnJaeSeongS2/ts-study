@@ -25,6 +25,8 @@ function outMeta():void {
 }
 
 export default {
-    out,
-    outMeta
+    test: function() {
+        out()
+        outMeta()
+    }
 }
