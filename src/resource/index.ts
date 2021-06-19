@@ -36,5 +36,25 @@ enumTest.out()
 enumTest.outMeta()
 typeTest.test()
 axiosTest.getSearchedArticleList()
+class A {
+    a:string
+    b:string
+    constructor(a:string, b:string) {
+        this.a = a
+        this.b = b
+    }
+    getA:() => string = () => {
+        console.log(this)
+        return this.a
+    }
+    showThis() {
+        console.log(this)
+    }
+}
+
+let a = new A("aaa", "bbb")
+a.getA()
+a.showThis()
+
 
 export {}
