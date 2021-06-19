@@ -6,6 +6,7 @@ import thisTest from './thisTest';
 import classTest from './classTest';
 import unionTest from './unionTest';
 import unionEnumTest from './unionEnumTest';
+import genericTest from './genericTest';
 
 enumTest.test();
 typeTest.test();
@@ -15,4 +16,5 @@ thisTest.test();
 literalTypeTest.test();
 unionTest.test();
 unionEnumTest.test();
+genericTest.test();
 export {}
