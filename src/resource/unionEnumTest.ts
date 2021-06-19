@@ -1,14 +1,18 @@
-type State = 'loading' | 'failed' | 'success'// cannnot be used
+enum State {
+    loading,
+    failed,
+    success,
+}
 type NetworkLoadingState = {
-    state: 'loading';
+    state: State.loading;
 }
 type NetworkFailedState = {
-    state: 'failed';
+    state: State.failed;
     code: number;
 }
 
 type NetworkSuccessState = {
-    state: 'success';
+    state: State.success;
     response: {
         title: string;
         duration: number;
@@ -22,11 +26,11 @@ type NetworkState =
 
 function getNetworkCheckingMsg(state: NetworkState): string {
     switch (state.state) {
-        case 'loading':
+        case State.loading:
             return 'Downloading...'
-        case 'failed':
+        case State.failed:
             return `Error code:${state.code} on downloading.`
-        case 'success':
+        case State.success:
             return `Success Download ${state.response.title} with ${state.response.duration}ms.`;
 
     }
@@ -35,14 +39,14 @@ function getNetworkCheckingMsg(state: NetworkState): string {
 export default {
     test: function() {
         const downloading: NetworkLoadingState = {
-            state: 'loading'
+            state: State.loading
         }
         const downloadFailed: NetworkFailedState = {
-            state: 'failed',
+            state: State.failed,
             code: 404
         }
         const downloadSuccess: NetworkSuccessState = {
-            state: 'success',
+            state: State.success,
             response: {
                 title: 'x-file',
                 duration: 5022
@@ -53,3 +57,4 @@ export default {
         console.log(getNetworkCheckingMsg(downloadSuccess))
     }
 }
+    
