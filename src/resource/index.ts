@@ -7,6 +7,7 @@ import classTest from './classTest';
 import unionTest from './unionTest';
 import unionEnumTest from './unionEnumTest';
 import genericTest from './genericTest';
+import mixinTest from './mixinTest';
 
 enumTest.test();
 typeTest.test();
@@ -17,4 +18,5 @@ literalTypeTest.test();
 unionTest.test();
 unionEnumTest.test();
 genericTest.test();
+mixinTest.test();
 export {}
